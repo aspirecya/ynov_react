@@ -1,0 +1,22 @@
+.btn {
+    display: inline-block;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.btn {
+    &-white {
+        background-color: white;
+    }
+    &-black {
+        background-color: black;
+        color: white;
+    }
+    &-sm {
+        font-size: 10px;
+    }
+    &-lg {
+        font-size: 20px;
+    }
+}

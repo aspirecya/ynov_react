@@ -1,0 +1,15 @@
+@mixin displayFlex($justifyContent, $alignItems) {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin postionAbsolute ($top, $right, $left, $bottom) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}

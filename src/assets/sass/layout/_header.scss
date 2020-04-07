@@ -1,0 +1,20 @@
+header {
+    ul {
+        display: flex;
+        li {
+            margin-bottom: 10px;
+            a {
+                color: $mainColor;
+                &.active {
+                    text-decoration: underline;
+                }
+                &:hover {
+                    color: $secondColor;
+                }
+                @media(max-width:580px) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
