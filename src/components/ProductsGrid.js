@@ -5,13 +5,23 @@ const ProductsGrid = (props) => {
 
   
   const addTocart = (product) => {
-    console.log(product);
-    localStorage.setItem('card',JSON.stringify(product));
+    let currentCard = localStorage.getItem('card');
+    console.log(JSON.parse(currentCard), 'Panier actuel');  
+    if (currentCard !== null) {
+      let cardArray = [];
+      console.log(JSON.parse(currentCard));
+      cardArray.push(currentCard, JSON.stringify(product));
+      localStorage.setItem('card', cardArray);
+      console.log(JSON.parse(cardArray));
+    }
+    else {
+      localStorage.setItem('card', JSON.stringify(product));
+    }
     //Pour récupérer le localstorage -> getItem('card)
     // Si le LS n'est pas null alors 
     //   -> alors stocker l'ancien LS dans un tableau vide
     //   -> Pusher le product dans le tableau
-    //   -> Le nouveau tableau set dans le LS
+    //   -> Le nouveau tableau set dans le LS 
     // Sinon si le LS est null 
     //     -> setItem du product
     // WARNING !! Stringify ce qu'on va passer dans le LS ([Object])
