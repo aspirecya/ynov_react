@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../components/Title';
 import ProductsGrid from '../components/ProductsGrid';
+import ApiProduct from '../api/api.products';
 
 export default class Products extends Component {
     constructor(props) {
@@ -13,8 +14,7 @@ export default class Products extends Component {
   };
   
   componentDidMount() {
-    fetch('https://my-json-server.typicode.com/jubs16/Products/Products')
-    .then(res => res.json())
+    ApiProduct.getProducts()
     .then((data) => {
         console.log(data);
         this.setState({
