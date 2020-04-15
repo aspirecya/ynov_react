@@ -1,24 +1,16 @@
 import React from 'react';
+import ProductItem from './ProductItem';
 
 const ProductsGrid = (props) => {
-    return (
+  return (
     <div className="products__grid">
-        {
-          props.products.map((product, index) => (
-            <div className="product__item">
-              <div className="product__thumb" style={{backgroundImage:`url(${product.imgUrl})`}}>
-              </div>
-              <h2>
-                {product.name}
-              </h2>
-              <p>
-                {product.price}
-              </p>
-            </div>
-          ))
-        }
+      {props.products.map((product, index) => (
+        <div className="product__item--wrapper" key={index}>
+          <ProductItem product={product}/>
+        </div>
+      ))}
     </div>
-    );
-}
+  );
+};
 
 export default ProductsGrid;
