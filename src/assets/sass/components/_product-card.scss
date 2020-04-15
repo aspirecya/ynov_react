@@ -1,0 +1,24 @@
+.product__card {
+    display: flex;
+    .left-part {
+        width: 50%;
+        .product__thumb {
+            height: 350px;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    .right-part {
+        width: 50%;
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}

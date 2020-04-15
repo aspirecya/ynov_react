@@ -1,0 +1,28 @@
+.products__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .product__item--wrapper {
+        text-align: center;
+        a {
+            text-decoration: none;
+        }
+    }
+    .product__item {
+        width: 300px;
+        margin: 20px;
+        h2 {
+            margin: 10px 0px;
+        }
+        p {
+            font-weight: 600;
+            color: black;
+        }
+        .product__thumb {
+            height: 350px;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

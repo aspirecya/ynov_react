@@ -1,6 +1,12 @@
 footer {
     background: black;
+    padding: 40px;
     p {
         color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        font-size: 15px;
+        font-family: $secondaryFont;
     }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Products from './pages/Products';
 import Users from './pages/Users';
+import Home from './pages/Home';
 
 export default class componentName extends Component {
   render() {
@@ -9,8 +10,7 @@ export default class componentName extends Component {
         <div>
             <Route path="/products" component={Products}/>
             <Route path="/users" component={Users}/>
-            {/* <Route path="/" component={Home}/> */}
-            {/* <Route path="/products/:id" component={ProductDetails} */}
+            <Route exact path="/" component={Home}/>
         </div>
     );
   }
