@@ -66,3 +66,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Todo
+- Formulaire Inscription (Hooks componants) : nom, prenom, mail, password
+- Icon panier dans le header avec le nombre d'items dans le panier)
+- Page panier avec le récap des produits + bouton pour vider tout le panier
+ + sur chaque ligne un bouton qui supprime le produit de la ligne
+- Page mon compte (nom, prenom, mail, password) + lien du compte dans le header
+- Component modal / popup
+- AddtoCart -> dans un fichier "utils" + Bouton add to cart à utiliser dans Product.js
+- Styliser au maximum le Eshop
