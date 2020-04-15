@@ -2,9 +2,20 @@ import React from 'react';
 import ProductItem from './ProductItem';
 
 const ProductsGrid = (props) => {
-  const addTocart = (args) => {
-      //console.log(product);
-     // localstorage.setItem('card',data);
+
+  
+  const addTocart = (product) => {
+    console.log(product);
+    localStorage.setItem('card',JSON.stringify(product));
+    //Pour récupérer le localstorage -> getItem('card)
+    // Si le LS n'est pas null alors 
+    //   -> alors stocker l'ancien LS dans un tableau vide
+    //   -> Pusher le product dans le tableau
+    //   -> Le nouveau tableau set dans le LS
+    // Sinon si le LS est null 
+    //     -> setItem du product
+    // WARNING !! Stringify ce qu'on va passer dans le LS ([Object])
+          // -> Donc pour le récupéer en JS -> JSON.parse()
   }
   return (
     <div className="products__grid">
@@ -12,8 +23,7 @@ const ProductsGrid = (props) => {
         <div className="product__item--wrapper" key={index}>
           <ProductItem product={product} />
           {/* doit être un composant */}
-          {/* <button onClick={(args)=>addTocart(args)}>Add to cart</button> */}
-         
+          <button className="btn btn-black" onClick={()=>addTocart(product)}>Add to cart</button>
         </div>
       ))}
     </div>
