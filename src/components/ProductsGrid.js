@@ -10,6 +10,7 @@ const ProductsGrid = (props) => {
     localStorage.setItem('card', JSON.stringify(card));
     console.log(JSON.parse(localStorage.getItem('card')));
   }
+  
   return (
     <div className="products__grid">
       {props.products.map((product, index) => (
